@@ -170,7 +170,7 @@ header a {
 }
 
 .hero-section {
-  background: url('./assets/hero.jpg') center/cover no-repeat;
+  background: url('../assets/hero.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 0;
