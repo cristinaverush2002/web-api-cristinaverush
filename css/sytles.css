@@ -1,0 +1,182 @@
+body {
+  font-family: 'PT Mono', monospace;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  padding-left: 10px;
+}
+
+.container {
+  margin: 10px auto;
+  padding: 0 40px 0 40px;
+  position: relative;
+  max-width: 1140px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.search-input {
+  border-radius: 8px;
+  flex: 1;
+  min-width: 600px;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 1px solid #101311;
+  margin-bottom: 10px;
+  font-family: 'PT Mono', monospace;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.search-button {
+  font-family: 'PT Mono', monospace;
+  color: #f8f9fa;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#sort-button {
+  background-color: #28a745;
+}
+
+#reverse-sort-button {
+  background-color: rgb(91, 91, 255);
+}
+
+#category-dropdown {
+  background-color: #ffc107;
+}
+
+#category-dropdown:hover {
+  background-color: #d49f01;
+}
+
+#reverse-sort-button:hover {
+  background-color: rgb(57, 57, 162);
+}
+
+#sort-button:hover {
+  background-color: #207e36;
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.col-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.person {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.person:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.person:hover .overlay {
+  opacity: 1;
+}
+
+.person-name {
+  margin-top: 15px;
+}
+
+.lines-wrap {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .lines-wrap {
+    display: none;
+  }
+}
+
+.lines-wrap .lines-inner {
+  position: absolute;
+  width: 1140px;
+  left: 50%;
+  margin-left: -570px;
+  top: 0;
+  height: 100%;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+}
+
+.lines-wrap .lines-inner .lines {
+  position: absolute;
+  left: 33.333333%;
+  right: 33.333333%;
+  height: 100%;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+}
+
+.hero-section {
+  background: url('/assets/hero.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
